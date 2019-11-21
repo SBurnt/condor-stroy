@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 1920px;
+  background-color: rgb(255, 255, 255);
+}
+
+.header {
+  background: url(../img/01block/background.png) no-repeat;
+  background-size: cover;
+  padding: 0 10px;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (min-width: 575.98px) {
+  .container {
+    padding: 0 calc(50% - 270px);
+  }
+}
+
+@media (min-width: 767.98px) {
+  .container {
+    padding: 0 calc(50% - 360px);
+  }
+}
+
+@media (min-width: 991.98px) {
+  .container {
+    padding: 0 calc(50% - 480px);
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .container {
+    padding: 0 calc(50% - 585px);
+  }
+  .header {
+    padding-top: 84px;
+  }
+}
