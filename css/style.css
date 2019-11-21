@@ -48,6 +48,11 @@ body {
   flex-wrap: wrap;
 }
 
+.header-menu-list-item:nth-child(2) {
+  position: relative;
+  padding: 12px 0 0 6px;
+}
+
 .block-logo {
   display: flex;
 }
@@ -73,6 +78,23 @@ body {
 
 .header-company-subtitle {
   line-height: 1.38;
+}
+
+/* Make the first letter in the string uppercase */
+.header-company-subtitle::first-letter,
+.header-work-time::first-letter {
+  text-transform: uppercase;
+}
+
+.icon-map-marker-company-address {
+  position: absolute;
+  top: 27px;
+  left: -30px;
+  font-size: 16px;
+  background: linear-gradient(to right, rgb(82, 129, 235), rgb(35, 93, 224));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header-company-address {
@@ -104,6 +126,17 @@ body {
 
 .header-social-list li {
   display: inline-block;
+}
+
+.icon-telegram-plane {
+  font-size: 23px;
+  color: rgba(59, 197, 255, 0.4);
+}
+
+.icon-whatsapp {
+  font-size: 23px;
+  padding-left: 20px;
+  color: rgb(106, 214, 76);
 }
 
 /* SECTION "HEADER-CONTENT" */
@@ -142,10 +175,24 @@ body {
 .btn-rectangular {
   height: 91px;
   max-width: 495px;
+  text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Gilroy Extrabold";
+  font-size: 1.125rem;
+  letter-spacing: 1.8px;
   color: #ffffff;
   text-transform: uppercase;
   cursor: pointer;
+  border: none;
+  border-radius: 10px 10px 24px 24px/10px 10px 17px 17px;
   padding: 0 15px;
+}
+
+.btn-orange-style {
+  border-bottom: 7px solid rgb(208, 89, 45);
+  background: #f6940f;
+  background: linear-gradient(to bottom, #f6940f 0, #f75b2f);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f6940f", endColorstr="#f75b2f", GradientType=0);
+  box-shadow: 0px 13px 51px 0px rgba(225, 88, 37, 0.72);
 }
 
 .header-content .btn-orange-style {
@@ -177,6 +224,28 @@ body {
   cursor: pointer;
 }
 
+.btn-plus-one {
+  transform: translate(96px, 56px);
+}
+
+.btn-plus-two {
+  transform: translate(285px, 182px);
+}
+
+.btn-plus-three {
+  transform: translate(64px, 270px);
+}
+
+.header-content-scroll-down p {
+  font-family: "Gilroy Extrabold";
+  font-size: 0.875rem;
+  letter-spacing: 3px;
+  writing-mode: tb-rl;
+  transform: translate(367px, 65px) rotate(180deg);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 /* ---------- MEDIA QUERIES ---------- */
 
 @media (min-width: 575.98px) {
@@ -203,5 +272,6 @@ body {
   }
   .header {
     padding-top: 84px;
+    padding-bottom: 240px;
   }
 }
