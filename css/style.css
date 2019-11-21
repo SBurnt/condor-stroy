@@ -32,13 +32,152 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+/* ---------- HEADER ---------- */
+
+/* SECTION "HEADER-MENU" */
+
 .header {
   background: url(../img/01block/background.png) no-repeat;
   background-size: cover;
   padding: 0 10px;
 }
 
-/* ----- MEDIA QUERIES ----- */
+.header-menu-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.block-logo {
+  display: flex;
+}
+
+.block-logo-title {
+  padding-left: 35px;
+}
+
+.header-company-title {
+  font-family: "Gilroy Heavy";
+  font-size: 1.0625rem;
+  line-height: 0.8;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  padding-bottom: 13px;
+  color: rgb(45, 45, 45);
+}
+
+.header-color-opacity {
+  font-family: "Gilroy Medium";
+  color: rgba(45, 45, 45, 0.3);
+}
+
+.header-company-subtitle {
+  line-height: 1.38;
+}
+
+.header-company-address {
+  font-family: "Gilroy Medium";
+  line-height: 1.5;
+  color: rgb(45, 45, 45);
+}
+
+.header-contact-information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header-work-time {
+  font-size: 0.875rem;
+  padding: 3px 4px 9px 0;
+  line-height: 1.71;
+}
+
+.header-contact-phone-number {
+  font-family: "Gilroy Extrabold";
+  font-size: 1.375rem;
+  line-height: 1.09;
+  letter-spacing: 1.1px;
+  padding-bottom: 7px;
+  color: rgb(45, 45, 45);
+}
+
+.header-social-list li {
+  display: inline-block;
+}
+
+/* SECTION "HEADER-CONTENT" */
+
+.header-content {
+  display: flex;
+  padding-top: 59px;
+}
+
+.header-content-basic-information {
+  display: flex;
+  flex-direction: column;
+  max-width: 54%;
+}
+
+.title-style {
+  font-family: "AvenirNextCyr Heavy";
+  font-size: 2.875em;
+  line-height: 1.33;
+  text-transform: uppercase;
+  color: rgb(45, 45, 45);
+}
+
+.header-content .title-style {
+  margin-bottom: 8px;
+}
+
+.subtitle-style {
+  font-family: "Gilroy Medium";
+  font-size: 1.25em;
+  line-height: 3.55;
+  color: rgb(45, 45, 45);
+  margin-bottom: 36px;
+}
+
+.btn-rectangular {
+  height: 91px;
+  max-width: 495px;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+.header-content .btn-orange-style {
+  margin-bottom: 35px;
+}
+
+.header-content-link-five-questions {
+  max-width: 285px;
+  margin-left: 84px;
+  line-height: 1.5;
+}
+
+.additional-information-title {
+  line-height: 1.33;
+  margin-top: 3px;
+}
+
+.header-content-btn-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  box-shadow: 0px 8px 29px 0 rgba(0, 112, 221, 0.72);
+  background-image: linear-gradient(to bottom, #5281eb, #235de0);
+  cursor: pointer;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
 
 @media (min-width: 575.98px) {
   .container {
