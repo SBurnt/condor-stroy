@@ -81,8 +81,8 @@ body {
 }
 
 /* Make the first letter in the string uppercase */
-.header-company-subtitle::first-letter,
-.header-work-time::first-letter {
+
+.header-company-subtitle::first-letter, .header-work-time::first-letter {
   text-transform: uppercase;
 }
 
@@ -154,7 +154,7 @@ body {
 
 .title-style {
   font-family: "AvenirNextCyr Heavy";
-  font-size: 2.875em;
+  font-size: 2.875rem;
   line-height: 1.33;
   text-transform: uppercase;
   color: rgb(45, 45, 45);
@@ -166,7 +166,7 @@ body {
 
 .subtitle-style {
   font-family: "Gilroy Medium";
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 3.55;
   color: rgb(45, 45, 45);
   margin-bottom: 36px;
@@ -244,6 +244,94 @@ body {
   transform: translate(367px, 65px) rotate(180deg);
   text-transform: uppercase;
   cursor: pointer;
+}
+
+/* ---------- MAIN ---------- */
+
+/* ---------- MAIN SECTION MATERIALS USED ---------- */
+
+.section-materials-used {
+  margin-top: -68px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-style-materials {
+  width: 100%;
+  max-width: 975px;
+  text-align: center;
+}
+
+.materials-wrapper {
+  width: 100%;
+  margin-bottom: 66px;
+}
+
+.materials-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.materials-list-item {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 366px;
+  border-radius: 15px;
+  background-image: linear-gradient(to top, #ededed, #f6f6f6);
+}
+
+.materials-list-item>img {
+  margin-left: -20px;
+}
+
+.materials-list-item-info {
+  align-self: flex-start;
+  padding-top: 52px;
+}
+
+.materials-list-item-title {
+  margin-bottom: 24px;
+}
+
+.materials-list-item-partners {
+  display: flex;
+}
+
+.materials-these {
+  font-family: "AvenirNextCyr Heavy";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgb(45, 45, 45);
+  margin-bottom: 50px;
+}
+
+.materials-info-wrapper {
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.materials-info-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.materials-info-list-item {
+  width: 100%;
+  max-width: 300px;
+}
+
+.materials-info-img-wrap {
+  width: 100%;
+  max-width: 165px;
+}
+
+.materials-info-img-wrap>img {
+  position: relative;
 }
 
 /* ---------- MEDIA QUERIES ---------- */
