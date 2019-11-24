@@ -1,25 +1,29 @@
 @font-face {
   font-weight: 500;
   font-family: "Gilroy Medium";
-  src: local("Gilroy-Medium"), local("Gilroy Medium"), url(../fonts/Gilroy-Medium.otf);
+  src: local("Gilroy-Medium"), local("Gilroy Medium"),
+    url(../fonts/Gilroy-Medium.otf);
 }
 
 @font-face {
   font-weight: 800;
   font-family: "Gilroy Extrabold";
-  src: local("Gilroy-Extrabold"), local("Gilroy Extrabold"), url(../fonts/Gilroy-Extrabold.otf);
+  src: local("Gilroy-Extrabold"), local("Gilroy Extrabold"),
+    url(../fonts/Gilroy-Extrabold.otf);
 }
 
 @font-face {
   font-weight: 900;
   font-family: "Gilroy Heavy";
-  src: local("Gilroy-Heavy"), local("Gilroy Heavy"), url(../fonts/Gilroy-Heavy.otf);
+  src: local("Gilroy-Heavy"), local("Gilroy Heavy"),
+    url(../fonts/Gilroy-Heavy.otf);
 }
 
 @font-face {
   font-weight: 900;
   font-family: "AvenirNextCyr Heavy";
-  src: local("AvenirNextCyr-Heavy"), local("AvenirNextCyr Heavy"), url(../fonts/AvenirNextCyr-Heavy.ttf);
+  src: local("AvenirNextCyr-Heavy"), local("AvenirNextCyr Heavy"),
+    url(../fonts/AvenirNextCyr-Heavy.ttf);
 }
 
 * {
@@ -82,7 +86,8 @@ body {
 
 /* Make the first letter in the string uppercase */
 
-.header-company-subtitle::first-letter, .header-work-time::first-letter {
+.header-company-subtitle::first-letter,
+.header-work-time::first-letter {
   text-transform: uppercase;
 }
 
@@ -174,7 +179,6 @@ body {
 
 .btn-rectangular {
   height: 91px;
-  max-width: 495px;
   text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
   font-family: "Gilroy Extrabold";
   font-size: 1.125rem;
@@ -195,12 +199,13 @@ body {
   box-shadow: 0px 13px 51px 0px rgba(225, 88, 37, 0.72);
 }
 
-.header-content .btn-orange-style {
+.header-content-btn {
+  max-width: 495px;
   margin-bottom: 35px;
 }
 
 .header-content-link-five-questions {
-  max-width: 285px;
+  max-width: 290px;
   margin-left: 84px;
   line-height: 1.5;
 }
@@ -268,11 +273,12 @@ body {
 
 .materials-wrapper {
   width: 100%;
-  margin-bottom: 66px;
+  margin-bottom: 61px;
 }
 
 .materials-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -281,38 +287,56 @@ body {
   align-items: flex-start;
   width: 100%;
   max-width: 366px;
+  padding: 10px;
   border-radius: 15px;
   background-image: linear-gradient(to top, #ededed, #f6f6f6);
 }
 
-.materials-list-item>img {
-  margin-left: -20px;
+.materials-img-wrap {
+  width: 120px;
 }
 
 .materials-list-item-info {
-  align-self: flex-start;
-  padding-top: 52px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
 
 .materials-list-item-title {
+  font-family: "Gilroy Extrabold";
+  font-size: 1.125rem;
+  line-height: 1.33;
+  color: rgb(45, 45, 45);
   margin-bottom: 24px;
 }
 
 .materials-list-item-partners {
   display: flex;
+  /* justify-content: space-between; */
+}
+
+.materials-list-item-partners li:not(:last-child):after {
+  content: "";
+  margin-right: 20px;
 }
 
 .materials-these {
   font-family: "AvenirNextCyr Heavy";
   font-size: 1.5rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: rgb(45, 45, 45);
-  margin-bottom: 50px;
+  margin-bottom: 41px;
+}
+
+.materials-these span {
+  background: url(../img/02block/texture.png) no-repeat center/cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .materials-info-wrapper {
   width: 100%;
-  margin-bottom: 64px;
 }
 
 .materials-info-list {
@@ -323,15 +347,90 @@ body {
 .materials-info-list-item {
   width: 100%;
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .materials-info-img-wrap {
+  display: flex;
+  justify-content: center;
+  height: 165px;
   width: 100%;
-  max-width: 165px;
+  /* max-width: 165px; */
+  position: relative;
 }
 
-.materials-info-img-wrap>img {
-  position: relative;
+.materials-info-img {
+  position: absolute;
+}
+
+.materials-info-list-item h4 {
+  font-family: "AvenirNextCyr Heavy";
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.materials-info-list-item p {
+  font-family: "Gilroy Medium";
+  font-size: 1rem;
+}
+
+.wrap-table {
+  width: 100%;
+  margin: 64px 0;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  font-family: "Gilroy Extrabold";
+  /* line-height: 4; */
+  padding: 24px 0;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgb(45, 45, 45);
+  border-right: #ffffff 2px solid;
+}
+
+td {
+  font-family: "Gilroy Medium";
+  /* line-height: 4; */
+  padding: 24px 0;
+  text-align: center;
+  color: rgb(45, 45, 45);
+  border-right: #ffffff 2px solid;
+}
+
+table td:first-child,
+table th:first-child {
+  max-width: 191px;
+  text-align: left;
+  padding-left: 29px;
+}
+
+tr:nth-child(1n) {
+  background-color: #f7f7f7;
+}
+
+tr:nth-child(2n) {
+  background-color: #ffe7dd;
+}
+
+.materials-btn {
+  width: 100%;
+  max-width: 621px;
+  margin-bottom: 132px;
+}
+
+.materials-btn span {
+  width: 38px;
+  height: 30px;
+  background: url(../img/02block/play-button.png) no-repeat 12px 0px;
+  position: absolute;
 }
 
 /* ---------- MEDIA QUERIES ---------- */
